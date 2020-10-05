@@ -4,6 +4,8 @@
       <w>constraintlayout</w>
       <w>deliveryhero</w>
       <w>kotlinx</w>
+      <w>localizer</w>
+      <w>viewmodel</w>
     </words>
   </dictionary>
 </component>
