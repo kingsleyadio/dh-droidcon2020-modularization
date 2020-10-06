@@ -48,6 +48,12 @@ dependencies {
     val retrofitVersion = "2.9.0"
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
+    val daggerVersion = "2.29.1"
+    implementation ("com.google.dagger:dagger:$daggerVersion")
+    implementation ("com.google.dagger:dagger-android-support:$daggerVersion")
+    kapt ("com.google.dagger:dagger-compiler:$daggerVersion")
+    kapt ("com.google.dagger:dagger-android-processor:$daggerVersion")
+
     testImplementation("junit:junit:4.13")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 

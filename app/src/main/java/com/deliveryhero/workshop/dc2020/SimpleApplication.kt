@@ -1,15 +1,24 @@
 package com.deliveryhero.workshop.dc2020
 
-import android.app.Application
 import androidx.appcompat.app.AppCompatDelegate
-import com.deliveryhero.workshop.dc2020.localization.ResourceStringLocalizer
+import com.deliveryhero.workshop.dc2020.di.DaggerAppComponent
 import com.deliveryhero.workshop.dc2020.localization.StringLocalizer
+import dagger.android.AndroidInjector
+import dagger.android.support.DaggerApplication
+import javax.inject.Inject
 
-class SimpleApplication : Application() {
+class SimpleApplication : DaggerApplication() {
+
+    @Inject
+    lateinit var stringLocalizer: StringLocalizer
 
     override fun onCreate() {
         super.onCreate()
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
-        StringLocalizer.setDefault(ResourceStringLocalizer(this))
+        StringLocalizer.setDefault(stringLocalizer)
+    }
+
+    override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
+        return DaggerAppComponent.factory().create(this)
     }
 }
