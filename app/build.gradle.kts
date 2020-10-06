@@ -22,6 +22,13 @@ android {
         viewBinding = true
     }
 
+    android {
+        compileOptions {
+            sourceCompatibility = JavaVersion.VERSION_1_8
+            targetCompatibility = JavaVersion.VERSION_1_8
+        }
+    }
+
     buildTypes {
         named("release") {
             isMinifyEnabled = false
@@ -49,10 +56,12 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
     val daggerVersion = "2.29.1"
-    implementation ("com.google.dagger:dagger:$daggerVersion")
-    implementation ("com.google.dagger:dagger-android-support:$daggerVersion")
-    kapt ("com.google.dagger:dagger-compiler:$daggerVersion")
-    kapt ("com.google.dagger:dagger-android-processor:$daggerVersion")
+    implementation("com.google.dagger:dagger:$daggerVersion")
+    implementation("com.google.dagger:dagger-android-support:$daggerVersion")
+    kapt("com.google.dagger:dagger-compiler:$daggerVersion")
+    kapt("com.google.dagger:dagger-android-processor:$daggerVersion")
+    val glideVersion = "4.11.0"
+    implementation("com.github.bumptech.glide:glide:$glideVersion")
 
     testImplementation("junit:junit:4.13")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")

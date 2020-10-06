@@ -4,6 +4,7 @@ import com.deliveryhero.workshop.dc2020.data.restaurant.domain.Restaurant
 import com.google.gson.GsonBuilder
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Inject
 
 interface RestaurantsRemoteDataSource {
 
@@ -12,7 +13,7 @@ interface RestaurantsRemoteDataSource {
     suspend fun getRestaurantDetails(id: Int): Restaurant
 }
 
-class RestaurantsRemoteDataSourceImpl(
+class RestaurantsRemoteDataSourceImpl @Inject constructor(
     private val retrofit: Retrofit
 ) : RestaurantsRemoteDataSource {
 
