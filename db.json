@@ -1,0 +1,306 @@
+{
+  "config": {
+    "currency_symbol": "$",
+    "max_price_tiers": 3,
+    "max_results_cache_time_seconds": "300",
+    "add_to_favorites_enabled": true
+  },
+  "restaurants": [
+    {
+      "id": 1001,
+      "name": "Passato Burger Master",
+      "image": "https://demo-api.deliveryherotech.com/images/restaurants/1/main.jpg?v=1",
+      "average_rating": 4.1,
+      "top_cuisines": [
+        "Texas Burgers",
+        "American Beef Rolls",
+        "Crunchy Fries"
+      ],
+      "distance_in_meters": 600,
+      "price_tier": 2,
+      "popularity_score": 400
+    },
+    {
+      "id": 1002,
+      "name": "Pizzeria Roma",
+      "image": "https://demo-api.deliveryherotech.com/images/restaurants/2/main.jpg",
+      "average_rating": 4.21,
+      "top_cuisines": [
+        "Pizzas",
+        "Pastas",
+        "Fresh made dough"
+      ],
+      "distance_in_meters": 1304,
+      "price_tier": 2,
+      "popularity_score": 120
+    },
+    {
+      "id": 1003,
+      "name": "Falafel Al Shamy",
+      "image": "https://demo-api.deliveryherotech.com/images/restaurants/3/main.jpg",
+      "average_rating": 4.52,
+      "top_cuisines": [
+        "Falafel",
+        "Hummus",
+        "Manakesh"
+      ],
+      "distance_in_meters": 2934,
+      "price_tier": 1,
+      "popularity_score": 500
+    },
+    {
+      "id": 1004,
+      "name": "Tobbie & Laura",
+      "image": "https://demo-api.deliveryherotech.com/images/restaurants/4/main.jpg",
+      "average_rating": 3.89,
+      "top_cuisines": [
+        "Currywurst",
+        "Schnitzel",
+        "Kartoffelsuppe"
+      ],
+      "distance_in_meters": 4123,
+      "price_tier": 1,
+      "popularity_score": 80
+    }
+  ],
+  "restaurant-details": [
+    {
+      "id": 1001,
+      "name": "Passato Burger Master",
+      "image": "https://demo-api.deliveryherotech.com/images/restaurants/1/main.jpg",
+      "average_rating": 4.1,
+      "top_cuisines": [
+        "Texas Burgers",
+        "American Beef Rolls",
+        "Crunchy Fries"
+      ],
+      "distance_in_meters": 600,
+      "price_tier": 2,
+      "popularity_score": 400,
+      "menu": [
+        {
+          "category_title": "Burgers",
+          "products": [
+            {
+              "id": 10001,
+              "name": "Texas Cheese Burger XL",
+              "image": "https://demo-api.deliveryherotech.com/images/products/10001.jpg",
+              "ingredients": "Home made beef, Cheedar cheese, Lettuce, Tomato Slices and Fresh Onions",
+              "price": 8.99
+            },
+            {
+              "id": 10002,
+              "name": "California Beef Heaven",
+              "image": "https://demo-api.deliveryherotech.com/images/products/10002.jpg",
+              "ingredients": "Home made buffalo burger, Cheedar cheese, Salami, Tomato Slices and Lettuce",
+              "price": 7.79
+            }
+          ]
+        },
+        {
+          "category_title": "Sides",
+          "products": [
+            {
+              "id": 10003,
+              "name": "French fries",
+              "image": "https://demo-api.deliveryherotech.com/images/products/10003.jpg",
+              "ingredients": "Freshly fried cristpy french fries from our gardens ",
+              "price": 2.99
+            },
+            {
+              "id": 10004,
+              "name": "Fanta Orange 330ml",
+              "image": "https://demo-api.deliveryherotech.com/images/products/10004.jpg",
+              "ingredients": "The original Fanta orange, served cold from the fridge",
+              "price": 1.99
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1002,
+      "name": "Pizzeria Roma",
+      "image": "https://demo-api.deliveryherotech.com/images/restaurants/2/main.jpg",
+      "average_rating": 4.21,
+      "top_cuisines": [
+        "Pizzas",
+        "Pastas",
+        "Fresh made dough"
+      ],
+      "distance_in_meters": 1304,
+      "price_tier": 2,
+      "popularity_score": 120,
+      "menu": [
+        {
+          "category_title": "Pizza",
+          "products": [
+            {
+              "id": 20001,
+              "name": "Pizza Margherita",
+              "image": "https://demo-api.deliveryherotech.com/images/products/20001.jpg",
+              "ingredients": "Tomatoes and thin slices of mozzarella; the mozzarella is arranged with a flower-shape over the tomato sauce",
+              "price": 8.99
+            },
+            {
+              "id": 20002,
+              "name": "Pizza Salami",
+              "image": "https://demo-api.deliveryherotech.com/images/products/20002.jpg",
+              "ingredients": "With fresh Salami, Tomato sauce und Mozzarella; directly out of the oven",
+              "price": 7.79
+            }
+          ]
+        },
+        {
+          "category_title": "Pasta",
+          "products": [
+            {
+              "id": 20003,
+              "name": "Spaghetti Bolognese",
+              "image": "https://demo-api.deliveryherotech.com/images/products/20003.jpg",
+              "ingredients": "Our best ever spaghetti Bolognese is super easy and a true Italian classic with a meaty, chilli sauce.",
+              "price": 7.99
+            },
+            {
+              "id": 20004,
+              "name": "Lasagna",
+              "image": "https://demo-api.deliveryherotech.com/images/products/20004.jpg",
+              "ingredients": "Made with stacked pasta alternated with sauces, vegetables and cheese, topped with melted grated cheese.",
+              "price": 8.99
+            }
+          ]
+        },
+        {
+          "category_title": "Drinks",
+          "products": [
+            {
+              "id": 20005,
+              "name": "Fanta Orange 330ml",
+              "image": "https://demo-api.deliveryherotech.com/images/products/20005.jpg",
+              "ingredients": "Fresh and cold taste of Orange and Soda.",
+              "price": 1.99
+            },
+            {
+              "id": 20006,
+              "name": "Espresso",
+              "image": "https://demo-api.deliveryherotech.com/images/products/20006.jpg",
+              "ingredients": "Made with colombian coffee beans.",
+              "price": 2.99
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1003,
+      "name": "Falafel Al Shamy",
+      "image": "https://demo-api.deliveryherotech.com/images/restaurants/3/main.jpg",
+      "average_rating": 4.52,
+      "top_cuisines": [
+        "Falafel",
+        "Hummus",
+        "Manakesh"
+      ],
+      "distance_in_meters": 2934,
+      "price_tier": 1,
+      "popularity_score": 500,
+      "menu": [
+        {
+          "category_title": "Falafel",
+          "products": [
+            {
+              "id": 30001,
+              "name": "Falafel Sandwitch",
+              "image": "https://demo-api.deliveryherotech.com/images/products/30001.jpg",
+              "ingredients": "Falafel in Pitta Bread dipped in Sesame and Hummus with Fresh Salat",
+              "price": 3.99
+            },
+            {
+              "id": 30002,
+              "name": "Falafel Place",
+              "image": "https://demo-api.deliveryherotech.com/images/products/30002.jpg",
+              "ingredients": "Fried Falafel with fried vegetables in Hummus and Pickles",
+              "price": 7.79
+            }
+          ]
+        },
+        {
+          "category_title": "Sides",
+          "products": [
+            {
+              "id": 30003,
+              "name": "French fries",
+              "image": "https://demo-api.deliveryherotech.com/images/products/30003.jpg",
+              "ingredients": "Freshly fried cristpy french fries from our gardens ",
+              "price": 2.99
+            }
+          ]
+        },
+        {
+          "category_title": "Drinks",
+          "products": [
+            {
+              "id": 30005,
+              "name": "Fanta Orange 330ml",
+              "image": "https://demo-api.deliveryherotech.com/images/products/30005.jpg",
+              "ingredients": "Fresh and cold taste of Orange and Soda.",
+              "price": 1.99
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1004,
+      "name": "Tobbie & Laura",
+      "image": "https://demo-api.deliveryherotech.com/images/restaurants/4/main.jpg",
+      "average_rating": 3.89,
+      "top_cuisines": [
+        "Currywurst",
+        "Schnitzel",
+        "Kartoffeln"
+      ],
+      "distance_in_meters": 4123,
+      "price_tier": 1,
+      "popularity_score": 80,
+      "menu": [
+        {
+          "category_title": "Currywurst",
+          "products": [
+            {
+              "id": 40001,
+              "name": "Currywurst im Brot",
+              "image": "https://demo-api.deliveryherotech.com/images/products/40001.jpg",
+              "ingredients": "Hotdog sausages prepared with cheese in German bread",
+              "price": 4.99
+            }
+          ]
+        },
+        {
+          "category_title": "Schnitzel",
+          "products": [
+            {
+              "id": 40002,
+              "name": "Haenchenschnitzel",
+              "image": "https://demo-api.deliveryherotech.com/images/products/40002.jpg",
+              "ingredients": "Chicken Panne, Breaded and Fried Chicken Breasts",
+              "price": 7.99
+            }
+          ]
+        },
+        {
+          "category_title": "Kartoffeln",
+          "products": [
+            {
+              "id": 40003,
+              "name": "Sweet Potatoes",
+              "image": "https://demo-api.deliveryherotech.com/images/products/40003.jpg",
+              "ingredients": "Fried sweet potato.",
+              "price": 2.99
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
