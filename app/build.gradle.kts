@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    kotlin("kapt")
     kotlin("android.extensions")
 }
 
@@ -30,6 +31,9 @@ android {
 }
 
 dependencies {
+    compileOnly(project(":translation-processor"))
+    kapt(project(":translation-processor"))
+
     implementation(fileTree("libs") { include("*.jar") })
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
     implementation("androidx.core:core-ktx:1.5.0-alpha04")
