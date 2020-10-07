@@ -7,4 +7,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="ToolbarCollapsedTextAppearance" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="ToolbarExpandedTextAppearance" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
 </resources>

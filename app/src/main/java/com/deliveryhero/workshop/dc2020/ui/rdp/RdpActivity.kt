@@ -1,8 +1,10 @@
 package com.deliveryhero.workshop.dc2020.ui.rdp
 
+import android.R
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
@@ -14,9 +16,11 @@ import com.deliveryhero.workshop.dc2020.data.restaurant.domain.Restaurant
 import com.deliveryhero.workshop.dc2020.databinding.ActivityRdpBinding
 import com.deliveryhero.workshop.dc2020.localization.StringLocalizer
 import com.deliveryhero.workshop.dc2020.ui.common.ViewModelFactory
+import com.google.android.material.appbar.CollapsingToolbarLayout
 import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.android.synthetic.main.activity_rdp.*
 import javax.inject.Inject
+
 
 class RdpActivity : DaggerAppCompatActivity() {
 
@@ -39,8 +43,18 @@ class RdpActivity : DaggerAppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRdpBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        initToolbar()
         lifecycleScope.launchWhenCreated { loadDetails() }
+    }
+
+    private fun initToolbar() {
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
     private fun loadDetails() {
@@ -62,7 +76,7 @@ class RdpActivity : DaggerAppCompatActivity() {
 
     private fun displayRestaurantDetails(restaurant: Restaurant) {
         Glide.with(binding.restaurantImage).load(restaurant.imgUrl).into(binding.restaurantImage)
-        binding.restaurantName.text = restaurant.name
+        binding.collapsingToolbar.title = restaurant.name
 
         val menuAdapter = MenuAdapter()
         menuRecyclerView.layoutManager = LinearLayoutManager(this)
