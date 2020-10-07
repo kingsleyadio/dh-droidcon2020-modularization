@@ -11,6 +11,6 @@ class ConfigRepository @Inject constructor(
 ) {
 
     suspend fun getConfig(): Config {
-        return memory.config ?: remote.getConfig()
+        return memory.config ?: remote.getConfig().also { memory.config = it }
     }
 }

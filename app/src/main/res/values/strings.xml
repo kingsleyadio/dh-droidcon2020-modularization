@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Food App</string>
+    <string name="empty_restaurants">No restaurant found. Please check again soon</string>
 </resources>

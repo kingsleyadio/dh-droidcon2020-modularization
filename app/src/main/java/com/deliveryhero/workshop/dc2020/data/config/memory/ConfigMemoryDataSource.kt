@@ -5,11 +5,11 @@ import dagger.Reusable
 import javax.inject.Inject
 
 interface ConfigMemoryDataSource {
-    val config: Config?
+    var config: Config?
 }
 
 @Reusable
 class ConfigMemoryDataSourceImpl @Inject constructor(): ConfigMemoryDataSource {
 
-    override val config: Config? = null
+    override var config: Config? = null
 }
