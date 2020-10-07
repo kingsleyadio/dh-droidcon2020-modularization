@@ -6,7 +6,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.deliveryhero.workshop.dc2020.data.restaurant.domain.Restaurant
+import com.deliveryhero.workshop.dc2020.data.restaurant.domain.popularityKey
 import com.deliveryhero.workshop.dc2020.databinding.ItemRestaurantsBinding
+import com.deliveryhero.workshop.dc2020.localization.StringLocalizer
 
 class RestaurantsAdapter(
     private val onClick: (Restaurant) -> Unit
@@ -47,15 +49,10 @@ class RestaurantsAdapter(
                 val characteristics = restaurant.topCuisines.joinToString(", ")
                 "$priceTier \u2022 $characteristics"
             }
-            restaurantPopularityTextView.text = when (restaurant.popularity) {
-                in 0..99 -> "Not popular"
-                in 100..399 -> "Popular"
-                in 400..699 -> "Very popular"
-                else -> "Unknown"
-            }
 
             Glide.with(restaurantImageView).load(restaurant.imgUrl).into(restaurantImageView)
             restaurantNameTextView.text = restaurant.name
+            restaurantPopularityTextView.text = StringLocalizer.getText(restaurant.popularityKey)
             restaurantPrimaryTag.text = "${restaurant.avgRating} \u2605"
         }
     }

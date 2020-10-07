@@ -7,9 +7,11 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.deliveryhero.translation.generated.TranslationKeys
 import com.deliveryhero.workshop.dc2020.R
 import com.deliveryhero.workshop.dc2020.data.restaurant.domain.Restaurant
 import com.deliveryhero.workshop.dc2020.databinding.ActivityRlpBinding
+import com.deliveryhero.workshop.dc2020.localization.StringLocalizer
 import com.deliveryhero.workshop.dc2020.ui.common.ViewModelFactory
 import com.deliveryhero.workshop.dc2020.ui.rdp.RdpActivity
 import dagger.android.support.DaggerAppCompatActivity
@@ -23,6 +25,9 @@ class RlpActivity : DaggerAppCompatActivity() {
             return Intent(context, RlpActivity::class.java)
         }
     }
+
+    @Inject
+    lateinit var stringLocalizer: StringLocalizer
 
     @Inject
     lateinit var viewModelFactory: ViewModelFactory<RlpViewModel>
@@ -56,9 +61,13 @@ class RlpActivity : DaggerAppCompatActivity() {
     }
 
     private fun handleRestaurants(result: Result<List<Restaurant>>) {
-        val restaurants = result
-            .onFailure { Toast.makeText(this, "Failed to load restaurants", Toast.LENGTH_SHORT).show() }
-            .getOrDefault(emptyList())
+        val restaurants = result.onFailure {
+            Toast.makeText(
+                this,
+                stringLocalizer.getText(TranslationKeys.RESTAURANT_LIST_FAILED),
+                Toast.LENGTH_SHORT
+            ).show()
+        }.getOrDefault(emptyList())
 
         binding.swipeRefreshLayout.isRefreshing = false
         binding.textViewEmpty.isVisible = restaurants.isEmpty()

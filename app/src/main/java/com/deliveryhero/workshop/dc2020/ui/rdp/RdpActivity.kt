@@ -9,8 +9,10 @@ import androidx.lifecycle.get
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
+import com.deliveryhero.translation.generated.TranslationKeys
 import com.deliveryhero.workshop.dc2020.data.restaurant.domain.Restaurant
 import com.deliveryhero.workshop.dc2020.databinding.ActivityRdpBinding
+import com.deliveryhero.workshop.dc2020.localization.StringLocalizer
 import com.deliveryhero.workshop.dc2020.ui.common.ViewModelFactory
 import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.android.synthetic.main.activity_rdp.*
@@ -28,6 +30,8 @@ class RdpActivity : DaggerAppCompatActivity() {
 
     private lateinit var binding: ActivityRdpBinding
 
+    @Inject
+    lateinit var stringLocalizer: StringLocalizer
     @Inject
     lateinit var viewModeFactory: ViewModelFactory<RdpViewModel>
 
@@ -48,9 +52,9 @@ class RdpActivity : DaggerAppCompatActivity() {
                 } else {
                     AlertDialog.Builder(this)
                         .setCancelable(false)
-                        .setMessage("Something went wrong. App was unable to get details. Please try again")
-                        .setNegativeButton("Quit") { _, _ -> finish() }
-                        .setPositiveButton("Retry") { _, _ -> loadDetails() }
+                        .setMessage(stringLocalizer.getText(TranslationKeys.RESTAURANT_DETAILS_FAILED))
+                        .setNegativeButton(stringLocalizer.getText(TranslationKeys.QUIT)) { _, _ -> finish() }
+                        .setPositiveButton(stringLocalizer.getText(TranslationKeys.RETRY)) { _, _ -> loadDetails() }
                         .show()
                 }
             })
