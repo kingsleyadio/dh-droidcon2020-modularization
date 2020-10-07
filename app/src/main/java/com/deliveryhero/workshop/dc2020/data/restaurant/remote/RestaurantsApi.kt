@@ -8,7 +8,7 @@ interface RestaurantsApi {
     @GET("restaurants")
     suspend fun getRestaurants(): List<RestaurantApiModel>
 
-    @GET("restaurants/{id}")
+    @GET("restaurant-details/{id}")
     suspend fun getRestaurantDetails(@Path("id") id: Int): RestaurantApiModel
 }
 
