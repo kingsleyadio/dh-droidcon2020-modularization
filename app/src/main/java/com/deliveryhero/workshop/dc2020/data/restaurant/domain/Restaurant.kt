@@ -8,5 +8,6 @@ data class Restaurant(
     val topCuisines: List<String>,
     val distance: Int,
     val priceTier: Int,
-    val popularity: Int
+    val popularity: Int,
+    val menu: Menu
 )

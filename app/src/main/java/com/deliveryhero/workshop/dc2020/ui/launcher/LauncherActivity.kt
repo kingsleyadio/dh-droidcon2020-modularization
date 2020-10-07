@@ -4,8 +4,8 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import com.deliveryhero.workshop.dc2020.R
-import com.deliveryhero.workshop.dc2020.ui.common.ViewModelFactory
 import com.deliveryhero.workshop.dc2020.ui.rdp.RdpActivity
+import com.deliveryhero.workshop.dc2020.ui.common.ViewModelFactory
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 
