@@ -4,10 +4,12 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.get
 import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
 import com.deliveryhero.workshop.dc2020.data.restaurant.domain.Restaurant
 import com.deliveryhero.workshop.dc2020.databinding.ActivityRdpBinding
+import com.deliveryhero.workshop.dc2020.ui.common.ViewModelFactory
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 
@@ -35,7 +37,7 @@ class RdpActivity : DaggerAppCompatActivity() {
     }
 
     private fun loadDetails() {
-        val viewModel = ViewModelProvider(this, viewModeFactory).get(RdpViewModel::class.java)
+        val viewModel = ViewModelProvider(this, viewModeFactory).get<RdpViewModel>()
         viewModel.loadRestaurantDetails(intent.getIntExtra(EXTRA_ID, 0))
             .observe(this, { displayRestaurantDetails(it.getOrThrow()) })
     }

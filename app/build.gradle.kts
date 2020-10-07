@@ -62,6 +62,8 @@ dependencies {
     kapt("com.google.dagger:dagger-android-processor:$daggerVersion")
     val glideVersion = "4.11.0"
     implementation("com.github.bumptech.glide:glide:$glideVersion")
+    val fragmentxVersion = "1.3.0-beta01"
+    implementation("androidx.fragment:fragment-ktx:$fragmentxVersion")
 
     testImplementation("junit:junit:4.13")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
