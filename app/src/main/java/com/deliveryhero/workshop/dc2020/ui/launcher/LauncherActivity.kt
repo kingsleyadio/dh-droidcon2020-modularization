@@ -4,8 +4,8 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import com.deliveryhero.workshop.dc2020.R
-import com.deliveryhero.workshop.dc2020.ui.rdp.RdpActivity
 import com.deliveryhero.workshop.dc2020.ui.common.ViewModelFactory
+import com.deliveryhero.workshop.dc2020.ui.rlp.RlpActivity
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 
@@ -24,7 +24,7 @@ class LauncherActivity : DaggerAppCompatActivity() {
 
     private fun handleInit(isInitialized: Boolean) {
         if (isInitialized) {
-            startActivity(RdpActivity.newIntent(this, 1001))
+            startActivity(RlpActivity.newIntent(this))
             finish()
         } else {
             AlertDialog.Builder(this)

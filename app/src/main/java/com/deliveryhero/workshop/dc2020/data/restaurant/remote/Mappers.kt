@@ -15,7 +15,7 @@ fun RestaurantApiModel.mapToDomain() =
         distance,
         priceTier,
         popularity,
-        Menu(menu.map(CategoryApiModel::mapToDomain))
+        Menu(menu.orEmpty().map(CategoryApiModel::mapToDomain))
     )
 
 fun CategoryApiModel.mapToDomain() =

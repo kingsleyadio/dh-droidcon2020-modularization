@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/restaurantConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:padding="16dp"
+    >
+
+    <ImageView
+        android:id="@+id/restaurantImageView"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_launcher_foreground"
+        />
+
+    <TextView
+        android:id="@+id/restaurantDeliveryTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/restaurantImageView"
+        app:layout_constraintStart_toStartOf="@id/restaurantImageView"
+        tools:text="25 min"
+        />
+
+    <TextView
+        android:id="@+id/restaurantPrimaryTag"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorPrimaryDark"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@id/restaurantFavouriteImageView"
+        app:layout_constraintStart_toStartOf="@id/restaurantImageView"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toTopOf="@id/restaurantImageView"
+        app:layout_constraintWidth_default="wrap"
+        tools:text="This discount seems"
+        />
+
+    <TextView
+        android:id="@+id/restaurantNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/restaurantImageView"
+        tools:text="Hong Kong Noodle Bar @"
+        />
+
+    <TextView
+        android:id="@+id/restaurantCharacteristicsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="@id/restaurantImageView"
+        app:layout_constraintStart_toStartOf="@id/restaurantImageView"
+        app:layout_constraintTop_toBottomOf="@id/restaurantNameTextView"
+        tools:text="$$$, American, Bakery &amp; Cafe"
+        />
+
+    <TextView
+        android:id="@+id/restaurantPopularityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/restaurantImageView"
+        app:layout_constraintTop_toBottomOf="@id/restaurantCharacteristicsTextView"
+        tools:text="$1.99 delivery"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/restaurantFavouriteImageView"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:padding="4dp"
+        android:visibility="gone"
+        android:elevation="2dp"
+        app:layout_constraintEnd_toEndOf="@id/restaurantImageView"
+        app:layout_constraintTop_toTopOf="@id/restaurantImageView"
+        tools:visibility="visible"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

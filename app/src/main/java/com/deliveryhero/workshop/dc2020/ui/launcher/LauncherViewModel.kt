@@ -9,7 +9,7 @@ import javax.inject.Inject
 
 class LauncherViewModel @Inject constructor(private val configRepository: ConfigRepository) : ViewModel() {
 
-    private val trigger = MutableLiveData(0)
+    private val trigger = MutableLiveData(Unit)
 
     val initializerLiveData = trigger.switchMap {
         liveData {
@@ -19,6 +19,6 @@ class LauncherViewModel @Inject constructor(private val configRepository: Config
     }
 
     fun reload() {
-        trigger.value = trigger.value!! + 1
+        trigger.value = Unit
     }
 }

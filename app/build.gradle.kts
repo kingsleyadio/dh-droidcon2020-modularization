@@ -46,7 +46,8 @@ dependencies {
     implementation("androidx.core:core-ktx:1.5.0-alpha04")
     implementation("androidx.appcompat:appcompat:1.3.0-alpha02")
     implementation("com.google.android.material:material:1.3.0-alpha03")
-    implementation("androidx.constraintlayout:constraintlayout:2.0.1")
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01")
+    implementation("androidx.constraintlayout:constraintlayout:2.0.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9")
     val lifecycleVersion = "2.3.0-beta01"
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion")

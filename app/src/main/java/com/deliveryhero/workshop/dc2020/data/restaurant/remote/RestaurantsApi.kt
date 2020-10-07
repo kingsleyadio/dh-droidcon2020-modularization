@@ -21,7 +21,7 @@ class RestaurantApiModel(
     @SerializedName("distance_in_meters") val distance: Int,
     @SerializedName("price_tier") val priceTier: Int,
     @SerializedName("popularity_score") val popularity: Int,
-    @SerializedName("menu") val menu: List<CategoryApiModel>
+    @SerializedName("menu") val menu: List<CategoryApiModel>?
 )
 
 class CategoryApiModel(
