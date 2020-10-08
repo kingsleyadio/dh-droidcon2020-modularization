@@ -1,0 +1,10 @@
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.deliveryhero.workshop.dc2020.rdp"
+    >
+
+    <application>
+        <activity android:name=".ui.RdpActivity" />
+    </application>
+
+</manifest>

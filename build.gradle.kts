@@ -7,6 +7,11 @@ buildscript {
     val lifecycleVersion by extra("2.3.0-beta01")
     val retrofitVersion by extra("2.9.0")
     val daggerVersion by extra("2.29.1")
+    val constraintLayoutVersion by extra("2.0.2")
+    val mdcVersion by extra("1.3.0-alpha03")
+    val appCompatVersion by extra("1.3.0-alpha02")
+    val coreVersion by extra("1.5.0-alpha04")
+    val glideVersion by extra("4.11.0")
 
     repositories {
         google()

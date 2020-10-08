@@ -15,7 +15,9 @@
             <option value="$PROJECT_DIR$/configs" />
             <option value="$PROJECT_DIR$/localization" />
             <option value="$PROJECT_DIR$/mvvm-common" />
+            <option value="$PROJECT_DIR$/rdp" />
             <option value="$PROJECT_DIR$/restaurant-provider" />
+            <option value="$PROJECT_DIR$/rlp" />
             <option value="$PROJECT_DIR$/test-common" />
             <option value="$PROJECT_DIR$/translation-processor" />
           </set>

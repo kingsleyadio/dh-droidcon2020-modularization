@@ -3,6 +3,7 @@ package com.deliveryhero.workshop.dc2020.di
 import android.app.Application
 import com.deliveryhero.workshop.dc2020.SimpleApplication
 import com.deliveryhero.workshop.dc2020.configs.ConfigsModule
+import com.deliveryhero.workshop.dc2020.rdp.di.RdpConfig
 import com.deliveryhero.workshop.dc2020.restaurant_provider.di.RestaurantProviderModule
 import com.deliveryhero.workshop.dc2020.rlp.di.RlpDiConfig
 import dagger.BindsInstance
@@ -10,7 +11,6 @@ import dagger.Component
 import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
 import javax.inject.Singleton
-
 @Component(
     modules = [
         ConfigsModule::class,
@@ -21,7 +21,7 @@ import javax.inject.Singleton
     ]
 )
 @Singleton
-interface AppComponent : AndroidInjector<SimpleApplication>, RlpDiConfig {
+interface AppComponent : AndroidInjector<SimpleApplication>, RlpDiConfig, RdpConfig {
 
     @Component.Factory
     interface Factory {

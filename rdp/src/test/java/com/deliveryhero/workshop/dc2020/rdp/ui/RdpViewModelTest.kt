@@ -1,4 +1,4 @@
-package com.deliveryhero.workshop.dc2020.ui.rdp
+package com.deliveryhero.workshop.dc2020.rdp.ui
 
 import com.deliveryhero.workshop.dc2020.restaurant_provider.RestaurantsRepo
 import com.deliveryhero.workshop.dc2020.testcommon.testRules

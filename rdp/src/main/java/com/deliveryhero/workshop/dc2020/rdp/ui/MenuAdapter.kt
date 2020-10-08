@@ -1,15 +1,15 @@
-package com.deliveryhero.workshop.dc2020.ui.rdp
+package com.deliveryhero.workshop.dc2020.rdp.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.deliveryhero.workshop.dc2020.rdp.databinding.MenuHeaderItemBinding
+import com.deliveryhero.workshop.dc2020.rdp.databinding.MenuItemBinding
+import com.deliveryhero.workshop.dc2020.rdp.ui.MenuAdapter.AdapterItem.HeaderItem
+import com.deliveryhero.workshop.dc2020.rdp.ui.MenuAdapter.AdapterItem.ProductItem
 import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Menu
 import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Product
-import com.deliveryhero.workshop.dc2020.databinding.MenuHeaderItemBinding
-import com.deliveryhero.workshop.dc2020.databinding.MenuItemBinding
-import com.deliveryhero.workshop.dc2020.ui.rdp.MenuAdapter.AdapterItem.HeaderItem
-import com.deliveryhero.workshop.dc2020.ui.rdp.MenuAdapter.AdapterItem.ProductItem
 
 class MenuAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 

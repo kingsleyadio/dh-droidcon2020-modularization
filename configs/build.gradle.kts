@@ -16,9 +16,6 @@ android {
 
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
-    compileOnly(project(":translation-processor"))
-    kapt(project(":translation-processor"))
-
     val retrofitVersion: String by rootProject.extra
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")

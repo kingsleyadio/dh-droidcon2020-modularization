@@ -1,4 +1,4 @@
-package com.deliveryhero.workshop.dc2020.ui.rdp
+package com.deliveryhero.workshop.dc2020.rdp.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData

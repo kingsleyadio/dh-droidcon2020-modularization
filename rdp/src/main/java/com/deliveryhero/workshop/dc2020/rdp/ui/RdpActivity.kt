@@ -1,25 +1,25 @@
-package com.deliveryhero.workshop.dc2020.ui.rdp
+package com.deliveryhero.workshop.dc2020.rdp.ui
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.deliveryhero.translation.generated.TranslationKeys
-import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Restaurant
-import com.deliveryhero.workshop.dc2020.databinding.ActivityRdpBinding
 import com.deliveryhero.workshop.dc2020.localization.StringLocalizer
 import com.deliveryhero.workshop.dc2020.mvvm_common.ViewModelFactory
-import dagger.android.support.DaggerAppCompatActivity
-import kotlinx.android.synthetic.main.activity_rdp.*
+import com.deliveryhero.workshop.dc2020.rdp.RdpApp
+import com.deliveryhero.workshop.dc2020.rdp.databinding.ActivityRdpBinding
+import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Restaurant
 import javax.inject.Inject
 
 
-class RdpActivity : DaggerAppCompatActivity() {
+class RdpActivity : AppCompatActivity() {
 
     companion object {
         private const val EXTRA_ID = "EXTRA_ID"
@@ -37,6 +37,7 @@ class RdpActivity : DaggerAppCompatActivity() {
     lateinit var viewModeFactory: ViewModelFactory<RdpViewModel>
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        RdpApp.inject(this)
         super.onCreate(savedInstanceState)
         binding = ActivityRdpBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -71,12 +72,12 @@ class RdpActivity : DaggerAppCompatActivity() {
             })
     }
 
-    private fun displayRestaurantDetails(restaurant: Restaurant) {
-        Glide.with(binding.restaurantImage).load(restaurant.imgUrl).into(binding.restaurantImage)
-        binding.collapsingToolbar.title = restaurant.name
+    private fun displayRestaurantDetails(restaurant: Restaurant) = with(binding) {
+        Glide.with(restaurantImage).load(restaurant.imgUrl).into(restaurantImage)
+        collapsingToolbar.title = restaurant.name
 
         val menuAdapter = MenuAdapter()
-        menuRecyclerView.layoutManager = LinearLayoutManager(this)
+        menuRecyclerView.layoutManager = LinearLayoutManager(this@RdpActivity)
         menuRecyclerView.adapter = menuAdapter
         menuAdapter.updateMenu(restaurant.menu)
     }

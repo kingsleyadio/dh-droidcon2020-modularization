@@ -1,3 +1,4 @@
+include(":rdp")
 include(":rlp")
 include(":configs")
 include(":test-common")
