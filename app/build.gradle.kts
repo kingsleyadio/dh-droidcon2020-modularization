@@ -41,6 +41,7 @@ android {
 dependencies {
     implementation(project(":localization"))
     implementation(project(":mvvm-common"))
+    implementation(project(":restaurant-provider"))
     implementation(fileTree("libs") { include("*.jar") })
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
     implementation("androidx.core:core-ktx:1.5.0-alpha04")

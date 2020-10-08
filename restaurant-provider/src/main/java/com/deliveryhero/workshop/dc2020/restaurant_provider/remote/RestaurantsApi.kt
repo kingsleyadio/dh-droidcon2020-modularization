@@ -1,4 +1,4 @@
-package com.deliveryhero.workshop.dc2020.data.restaurant.remote
+package com.deliveryhero.workshop.dc2020.restaurant_provider.remote
 
 import com.google.gson.annotations.SerializedName
 import retrofit2.http.GET

@@ -2,6 +2,7 @@ package com.deliveryhero.workshop.dc2020.di
 
 import android.app.Application
 import com.deliveryhero.workshop.dc2020.SimpleApplication
+import com.deliveryhero.workshop.dc2020.restaurant_provider.di.RestaurantProviderModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector
@@ -13,7 +14,8 @@ import javax.inject.Singleton
         AppProviderModule::class,
         AppBinderModule::class,
         AndroidSupportInjectionModule::class,
-        ActivityBuilder::class
+        ActivityBuilder::class,
+        RestaurantProviderModule::class
     ]
 )
 @Singleton

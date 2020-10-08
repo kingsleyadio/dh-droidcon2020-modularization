@@ -1,4 +1,4 @@
-package com.deliveryhero.workshop.dc2020.data.restaurant.domain
+package com.deliveryhero.workshop.dc2020.restaurant_provider.domain
 
 import com.deliveryhero.translation.generated.TranslationKeys
 

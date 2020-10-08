@@ -4,8 +4,6 @@ import com.deliveryhero.workshop.dc2020.data.config.memory.ConfigMemoryDataSourc
 import com.deliveryhero.workshop.dc2020.data.config.memory.ConfigMemoryDataSourceImpl
 import com.deliveryhero.workshop.dc2020.data.config.remote.ConfigRemoteDataSource
 import com.deliveryhero.workshop.dc2020.data.config.remote.ConfigRemoteDataSourceImpl
-import com.deliveryhero.workshop.dc2020.data.restaurant.remote.RestaurantsRemoteDataSource
-import com.deliveryhero.workshop.dc2020.data.restaurant.remote.RestaurantsRemoteDataSourceImpl
 import dagger.Binds
 import dagger.Module
 
@@ -17,7 +15,4 @@ interface AppBinderModule {
 
     @Binds
     fun bindsConfigMemoryDataSource(impl: ConfigMemoryDataSourceImpl): ConfigMemoryDataSource
-
-    @Binds
-    fun bindsRestaurantRemoteDataSource(impl: RestaurantsRemoteDataSourceImpl): RestaurantsRemoteDataSource
 }

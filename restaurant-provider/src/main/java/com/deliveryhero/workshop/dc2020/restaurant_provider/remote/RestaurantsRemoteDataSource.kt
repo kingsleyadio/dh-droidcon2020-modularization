@@ -1,9 +1,7 @@
-package com.deliveryhero.workshop.dc2020.data.restaurant.remote
+package com.deliveryhero.workshop.dc2020.restaurant_provider.remote
 
-import com.deliveryhero.workshop.dc2020.data.restaurant.domain.Restaurant
-import com.google.gson.GsonBuilder
+import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Restaurant
 import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Inject
 
 interface RestaurantsRemoteDataSource {

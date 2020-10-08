@@ -1,6 +1,6 @@
-package com.deliveryhero.workshop.dc2020.data.restaurant
+package com.deliveryhero.workshop.dc2020.restaurant_provider
 
-import com.deliveryhero.workshop.dc2020.data.restaurant.remote.RestaurantsRemoteDataSource
+import com.deliveryhero.workshop.dc2020.restaurant_provider.remote.RestaurantsRemoteDataSource
 import javax.inject.Inject
 
 class RestaurantsRepo @Inject constructor(

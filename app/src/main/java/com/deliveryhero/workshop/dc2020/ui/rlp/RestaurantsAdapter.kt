@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.deliveryhero.workshop.dc2020.data.restaurant.domain.Restaurant
-import com.deliveryhero.workshop.dc2020.data.restaurant.domain.popularityKey
+import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Restaurant
+import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.popularityKey
 import com.deliveryhero.workshop.dc2020.databinding.ItemRestaurantsBinding
 import com.deliveryhero.workshop.dc2020.localization.StringLocalizer
 
@@ -57,4 +57,3 @@ class RestaurantsAdapter(
         }
     }
 }
-

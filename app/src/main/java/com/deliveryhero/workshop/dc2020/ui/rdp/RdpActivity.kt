@@ -10,7 +10,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.deliveryhero.translation.generated.TranslationKeys
-import com.deliveryhero.workshop.dc2020.data.restaurant.domain.Restaurant
+import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Restaurant
 import com.deliveryhero.workshop.dc2020.databinding.ActivityRdpBinding
 import com.deliveryhero.workshop.dc2020.localization.StringLocalizer
 import com.deliveryhero.workshop.dc2020.mvvm_common.ViewModelFactory

@@ -4,8 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.deliveryhero.workshop.dc2020.data.restaurant.domain.Menu
-import com.deliveryhero.workshop.dc2020.data.restaurant.domain.Product
+import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Menu
+import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Product
 import com.deliveryhero.workshop.dc2020.databinding.MenuHeaderItemBinding
 import com.deliveryhero.workshop.dc2020.databinding.MenuItemBinding
 import com.deliveryhero.workshop.dc2020.ui.rdp.MenuAdapter.AdapterItem.HeaderItem

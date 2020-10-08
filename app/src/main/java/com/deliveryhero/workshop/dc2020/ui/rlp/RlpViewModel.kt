@@ -4,8 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.deliveryhero.workshop.dc2020.data.restaurant.RestaurantsRepo
-import com.deliveryhero.workshop.dc2020.data.restaurant.domain.Restaurant
+import com.deliveryhero.workshop.dc2020.restaurant_provider.RestaurantsRepo
+import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Restaurant
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 

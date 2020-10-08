@@ -1,7 +1,7 @@
-package com.deliveryhero.workshop.dc2020.data.restaurant
+package com.deliveryhero.workshop.dc2020.restaurant_provider
 
-import com.deliveryhero.workshop.dc2020.data.restaurant.domain.Restaurant
-import com.deliveryhero.workshop.dc2020.data.restaurant.remote.RestaurantsRemoteDataSource
+import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Restaurant
+import com.deliveryhero.workshop.dc2020.restaurant_provider.remote.RestaurantsRemoteDataSource
 import com.deliveryhero.workshop.dc2020.testcommon.testRules
 import com.nhaarman.mockitokotlin2.*
 import kotlinx.coroutines.test.runBlockingTest

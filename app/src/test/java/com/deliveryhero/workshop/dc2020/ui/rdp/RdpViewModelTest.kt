@@ -1,6 +1,6 @@
 package com.deliveryhero.workshop.dc2020.ui.rdp
 
-import com.deliveryhero.workshop.dc2020.data.restaurant.RestaurantsRepo
+import com.deliveryhero.workshop.dc2020.restaurant_provider.RestaurantsRepo
 import com.deliveryhero.workshop.dc2020.testcommon.testRules
 import com.deliveryhero.workshop.dc2020.testcommon.withObserver
 import com.nhaarman.mockitokotlin2.*

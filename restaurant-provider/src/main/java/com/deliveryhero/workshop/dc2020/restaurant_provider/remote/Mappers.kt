@@ -1,9 +1,9 @@
-package com.deliveryhero.workshop.dc2020.data.restaurant.remote
+package com.deliveryhero.workshop.dc2020.restaurant_provider.remote
 
-import com.deliveryhero.workshop.dc2020.data.restaurant.domain.Category
-import com.deliveryhero.workshop.dc2020.data.restaurant.domain.Menu
-import com.deliveryhero.workshop.dc2020.data.restaurant.domain.Product
-import com.deliveryhero.workshop.dc2020.data.restaurant.domain.Restaurant
+import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Category
+import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Menu
+import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Product
+import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Restaurant
 
 fun RestaurantApiModel.mapToDomain() =
     Restaurant(
