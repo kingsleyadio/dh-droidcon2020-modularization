@@ -1,4 +1,4 @@
-package com.deliveryhero.workshop.dc2020.common
+package com.deliveryhero.workshop.dc2020.testcommon
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import org.junit.rules.RuleChain

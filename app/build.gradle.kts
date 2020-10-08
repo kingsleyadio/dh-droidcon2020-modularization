@@ -50,7 +50,7 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.0.2")
     val coroutinesVersion = "1.3.9"
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
-    val lifecycleVersion = "2.3.0-beta01"
+    val lifecycleVersion: String by rootProject.extra
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion")
@@ -67,14 +67,7 @@ dependencies {
     val fragmentxVersion = "1.3.0-beta01"
     implementation("androidx.fragment:fragment-ktx:$fragmentxVersion")
 
-    testImplementation("junit:junit:4.13")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
-    val mockitoVersion = "3.3.3"
-    testImplementation("org.mockito:mockito-core:$mockitoVersion")
-    testImplementation("org.mockito:mockito-inline:$mockitoVersion")
-    testImplementation("com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0")
-    testImplementation("androidx.arch.core:core-testing:2.1.0")
-    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion")
+    testImplementation(project(":test-common"))
 
     androidTestImplementation("androidx.test.ext:junit:1.1.2")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.3.0")

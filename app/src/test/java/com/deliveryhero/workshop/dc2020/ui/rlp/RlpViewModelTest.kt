@@ -1,9 +1,9 @@
 package com.deliveryhero.workshop.dc2020.ui.rlp
 
-import com.deliveryhero.workshop.dc2020.common.testRules
-import com.deliveryhero.workshop.dc2020.common.withObserver
 import com.deliveryhero.workshop.dc2020.data.restaurant.RestaurantsRepo
 import com.deliveryhero.workshop.dc2020.data.restaurant.domain.Restaurant
+import com.deliveryhero.workshop.dc2020.testcommon.testRules
+import com.deliveryhero.workshop.dc2020.testcommon.withObserver
 import com.nhaarman.mockitokotlin2.argWhere
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.verify

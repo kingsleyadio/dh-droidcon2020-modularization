@@ -3,6 +3,8 @@ buildscript {
     val kotlinVersion by extra("1.4.10")
     val minSdkVersion by extra(21)
     val targetSdkVersion by extra(30)
+    val coroutinesVersion by extra("1.3.9")
+    val lifecycleVersion by extra("2.3.0-beta01")
 
     repositories {
         google()

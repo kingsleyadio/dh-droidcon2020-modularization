@@ -1,9 +1,9 @@
 package com.deliveryhero.workshop.dc2020.ui.launcher
 
-import com.deliveryhero.workshop.dc2020.common.testRules
-import com.deliveryhero.workshop.dc2020.common.withObserver
 import com.deliveryhero.workshop.dc2020.data.config.ConfigRepository
 import com.deliveryhero.workshop.dc2020.data.config.domain.Config
+import com.deliveryhero.workshop.dc2020.testcommon.testRules
+import com.deliveryhero.workshop.dc2020.testcommon.withObserver
 import com.nhaarman.mockitokotlin2.*
 import kotlinx.coroutines.test.runBlockingTest
 import org.junit.Rule

@@ -1,3 +1,4 @@
+include(":test-common")
 include(":mvvm-common")
 include(":app")
 include(":localization")
