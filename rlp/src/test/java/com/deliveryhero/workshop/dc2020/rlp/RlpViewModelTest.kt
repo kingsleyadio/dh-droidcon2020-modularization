@@ -1,4 +1,4 @@
-package com.deliveryhero.workshop.dc2020.ui.rlp
+package com.deliveryhero.workshop.dc2020.rlp
 
 import com.deliveryhero.workshop.dc2020.restaurant_provider.RestaurantsRepo
 import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Restaurant

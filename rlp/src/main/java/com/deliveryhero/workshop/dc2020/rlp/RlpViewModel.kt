@@ -1,4 +1,4 @@
-package com.deliveryhero.workshop.dc2020.ui.rlp
+package com.deliveryhero.workshop.dc2020.rlp
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

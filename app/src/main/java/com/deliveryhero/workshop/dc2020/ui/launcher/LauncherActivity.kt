@@ -7,7 +7,7 @@ import com.deliveryhero.translation.generated.TranslationKeys
 import com.deliveryhero.workshop.dc2020.R
 import com.deliveryhero.workshop.dc2020.localization.StringLocalizer
 import com.deliveryhero.workshop.dc2020.mvvm_common.ViewModelFactory
-import com.deliveryhero.workshop.dc2020.ui.rlp.RlpActivity
+import com.deliveryhero.workshop.dc2020.rlp.RlpProvider
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 
@@ -28,7 +28,7 @@ class LauncherActivity : DaggerAppCompatActivity() {
 
     private fun handleInit(isInitialized: Boolean) {
         if (isInitialized) {
-            startActivity(RlpActivity.newIntent(this))
+            startActivity(RlpProvider.getRlpStartIntent(this))
             finish()
         } else {
             AlertDialog.Builder(this)

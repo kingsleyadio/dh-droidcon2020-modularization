@@ -4,6 +4,7 @@ import android.app.Application
 import com.deliveryhero.workshop.dc2020.SimpleApplication
 import com.deliveryhero.workshop.dc2020.configs.ConfigsModule
 import com.deliveryhero.workshop.dc2020.restaurant_provider.di.RestaurantProviderModule
+import com.deliveryhero.workshop.dc2020.rlp.di.RlpDiConfig
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector
@@ -20,7 +21,7 @@ import javax.inject.Singleton
     ]
 )
 @Singleton
-interface AppComponent : AndroidInjector<SimpleApplication> {
+interface AppComponent : AndroidInjector<SimpleApplication>, RlpDiConfig {
 
     @Component.Factory
     interface Factory {

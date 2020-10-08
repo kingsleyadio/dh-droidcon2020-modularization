@@ -1,23 +1,23 @@
-package com.deliveryhero.workshop.dc2020.ui.rlp
+package com.deliveryhero.workshop.dc2020.rlp
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.deliveryhero.translation.generated.TranslationKeys
-import com.deliveryhero.workshop.dc2020.R
 import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Restaurant
-import com.deliveryhero.workshop.dc2020.databinding.ActivityRlpBinding
 import com.deliveryhero.workshop.dc2020.localization.StringLocalizer
 import com.deliveryhero.workshop.dc2020.mvvm_common.ViewModelFactory
-import com.deliveryhero.workshop.dc2020.ui.rdp.RdpActivity
-import dagger.android.support.DaggerAppCompatActivity
+import com.deliveryhero.workshop.dc2020.rlp.databinding.ActivityRlpBinding
+import dagger.android.DispatchingAndroidInjector
+import dagger.android.HasAndroidInjector
 import javax.inject.Inject
 
-class RlpActivity : DaggerAppCompatActivity() {
+class RlpActivity : AppCompatActivity(), HasAndroidInjector {
 
     companion object {
 
@@ -31,13 +31,23 @@ class RlpActivity : DaggerAppCompatActivity() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelFactory<RlpViewModel>
+
+    @Inject
+    lateinit var androidInjector: DispatchingAndroidInjector<Any>
+
+    @Inject
+    lateinit var rdpLauncher: RdpLauncher
+
     private val viewModel by viewModels<RlpViewModel> { viewModelFactory }
 
     private lateinit var binding: ActivityRlpBinding
     private lateinit var restaurantsAdapter: RestaurantsAdapter
 
+    override fun androidInjector() = androidInjector
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        RlpProvider.inject(this)
         binding = ActivityRlpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -75,6 +85,6 @@ class RlpActivity : DaggerAppCompatActivity() {
     }
 
     private fun handleRestaurantSelection(restaurant: Restaurant) {
-        startActivity(RdpActivity.newIntent(this, restaurant.id))
+        rdpLauncher.launchRdp(this, restaurant.id)
     }
 }

@@ -1,14 +1,14 @@
-package com.deliveryhero.workshop.dc2020.ui.rlp
+package com.deliveryhero.workshop.dc2020.rlp
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.deliveryhero.workshop.dc2020.localization.StringLocalizer
 import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Restaurant
 import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.popularityKey
-import com.deliveryhero.workshop.dc2020.databinding.ItemRestaurantsBinding
-import com.deliveryhero.workshop.dc2020.localization.StringLocalizer
+import com.deliveryhero.workshop.dc2020.rlp.databinding.ItemRestaurantsBinding
 
 class RestaurantsAdapter(
     private val onClick: (Restaurant) -> Unit
