@@ -6,12 +6,13 @@ plugins {
 }
 
 android {
-    setCompileSdkVersion(30)
-
+    val targetSdkVersion: Int by rootProject.extra
+    val minSdkVersion: Int by rootProject.extra
+    setCompileSdkVersion(targetSdkVersion)
     defaultConfig {
         applicationId = "com.deliveryhero.workshop.dc2020"
-        setMinSdkVersion(21)
-        setTargetSdkVersion(30)
+        setMinSdkVersion(minSdkVersion)
+        setTargetSdkVersion(targetSdkVersion)
         versionCode = 1
         versionName = "1.0"
 
@@ -38,8 +39,7 @@ android {
 }
 
 dependencies {
-    compileOnly(project(":translation-processor"))
-    kapt(project(":translation-processor"))
+    implementation(project(":localization"))
 
     implementation(fileTree("libs") { include("*.jar") })
     implementation("org.jetbrains.kotlin:kotlin-stdlib")

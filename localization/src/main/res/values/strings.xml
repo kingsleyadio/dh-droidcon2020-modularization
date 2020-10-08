@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Food App</string>
+    <string name="empty_restaurants">No restaurant found. Please check again soon</string>
+    <string name="app_initialization_failed">Something went wrong. App was unable to initialize. Please try again</string>
+    <string name="quit">Quit</string>
+    <string name="retry">Retry</string>
+    <string name="restaurant_list_failed">Failed to load restaurants</string>
+    <string name="restaurant_details_failed">Something went wrong. App was unable to get details. Please try again</string>
+    <string name="not_popular">Not popular</string>
+    <string name="popular">Popular</string>
+    <string name="very_popular">Very popular</string>
+    <string name="unknown">Unknown</string>
+</resources>
