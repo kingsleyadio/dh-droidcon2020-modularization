@@ -5,6 +5,8 @@ buildscript {
     val targetSdkVersion by extra(30)
     val coroutinesVersion by extra("1.3.9")
     val lifecycleVersion by extra("2.3.0-beta01")
+    val retrofitVersion by extra("2.9.0")
+    val daggerVersion by extra("2.29.1")
 
     repositories {
         google()

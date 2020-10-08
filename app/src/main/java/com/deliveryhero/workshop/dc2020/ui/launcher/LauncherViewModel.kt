@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import androidx.lifecycle.switchMap
-import com.deliveryhero.workshop.dc2020.data.config.ConfigRepository
+import com.deliveryhero.workshop.dc2020.configs.ConfigRepository
 import javax.inject.Inject
 
 class LauncherViewModel @Inject constructor(private val configRepository: ConfigRepository) : ViewModel() {

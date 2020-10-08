@@ -41,6 +41,7 @@ android {
 dependencies {
     implementation(project(":localization"))
     implementation(project(":mvvm-common"))
+    implementation(project(":configs"))
     implementation(project(":restaurant-provider"))
     implementation(fileTree("libs") { include("*.jar") })
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
@@ -55,10 +56,10 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion")
-    val retrofitVersion = "2.9.0"
+    val retrofitVersion: String by rootProject.extra
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
-    val daggerVersion = "2.29.1"
+    val daggerVersion: String by rootProject.extra
     implementation("com.google.dagger:dagger:$daggerVersion")
     implementation("com.google.dagger:dagger-android-support:$daggerVersion")
     kapt("com.google.dagger:dagger-compiler:$daggerVersion")

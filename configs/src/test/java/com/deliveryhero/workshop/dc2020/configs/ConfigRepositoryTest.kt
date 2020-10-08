@@ -1,8 +1,8 @@
-package com.deliveryhero.workshop.dc2020.data.config
+package com.deliveryhero.workshop.dc2020.configs
 
-import com.deliveryhero.workshop.dc2020.data.config.domain.Config
-import com.deliveryhero.workshop.dc2020.data.config.memory.ConfigMemoryDataSource
-import com.deliveryhero.workshop.dc2020.data.config.remote.ConfigRemoteDataSource
+import com.deliveryhero.workshop.dc2020.configs.domain.Config
+import com.deliveryhero.workshop.dc2020.configs.memory.ConfigMemoryDataSource
+import com.deliveryhero.workshop.dc2020.configs.remote.ConfigRemoteDataSource
 import com.deliveryhero.workshop.dc2020.testcommon.testRules
 import com.nhaarman.mockitokotlin2.*
 import kotlinx.coroutines.test.runBlockingTest

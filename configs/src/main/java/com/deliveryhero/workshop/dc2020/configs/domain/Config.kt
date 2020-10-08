@@ -1,4 +1,4 @@
-package com.deliveryhero.workshop.dc2020.data.config.domain
+package com.deliveryhero.workshop.dc2020.configs.domain
 
 class Config(
     val currencySymbol: String = "$",
