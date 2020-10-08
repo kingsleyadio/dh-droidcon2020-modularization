@@ -28,7 +28,8 @@ subprojects {
         kotlinOptions.freeCompilerArgs += listOf(
             "-progressive",
             "-Xopt-in=kotlin.ExperimentalStdlibApi",
-            "-Xopt-in=kotlin.experimental.ExperimentalTypeInference"
+            "-Xopt-in=kotlin.experimental.ExperimentalTypeInference",
+            "-Xopt-in=kotlinx.coroutines.ExperimentalCoroutinesApi"
         )
     }
 }
