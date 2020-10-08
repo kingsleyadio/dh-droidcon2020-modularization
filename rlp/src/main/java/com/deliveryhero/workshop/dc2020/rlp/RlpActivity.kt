@@ -9,15 +9,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.deliveryhero.translation.generated.TranslationKeys
-import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Restaurant
 import com.deliveryhero.workshop.dc2020.localization.StringLocalizer
 import com.deliveryhero.workshop.dc2020.mvvm_common.ViewModelFactory
+import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Restaurant
 import com.deliveryhero.workshop.dc2020.rlp.databinding.ActivityRlpBinding
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
 import javax.inject.Inject
 
-class RlpActivity : AppCompatActivity(), HasAndroidInjector {
+internal class RlpActivity : AppCompatActivity(), HasAndroidInjector {
 
     companion object {
 

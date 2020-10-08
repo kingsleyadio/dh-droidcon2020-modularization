@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 import retrofit2.http.GET
 import retrofit2.http.Path
 
-interface RestaurantsApi {
+internal interface RestaurantsApi {
     @GET("restaurants")
     suspend fun getRestaurants(): List<RestaurantApiModel>
 
@@ -12,7 +12,7 @@ interface RestaurantsApi {
     suspend fun getRestaurantDetails(@Path("id") id: Int): RestaurantApiModel
 }
 
-class RestaurantApiModel(
+internal class RestaurantApiModel(
     @SerializedName("id") val id: Int,
     @SerializedName("name") val name: String,
     @SerializedName("image") val imgUrl: String,
@@ -24,12 +24,12 @@ class RestaurantApiModel(
     @SerializedName("menu") val menu: List<CategoryApiModel>?
 )
 
-class CategoryApiModel(
+internal class CategoryApiModel(
     @SerializedName("category_title") val title: String,
     @SerializedName("products") val products: List<ProductApiModel>
 )
 
-class ProductApiModel(
+internal class ProductApiModel(
     @SerializedName("id") val id: Int,
     @SerializedName("name") val name: String,
     @SerializedName("image") val imgUrl: String,

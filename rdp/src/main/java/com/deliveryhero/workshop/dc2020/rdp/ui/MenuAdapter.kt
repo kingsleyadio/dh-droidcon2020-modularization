@@ -11,7 +11,7 @@ import com.deliveryhero.workshop.dc2020.rdp.ui.MenuAdapter.AdapterItem.ProductIt
 import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Menu
 import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Product
 
-class MenuAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+internal class MenuAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     companion object {
         const val TYPE_ITEM = 0
@@ -57,7 +57,7 @@ class MenuAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun getItemViewType(position: Int) = menuItems[position].viewType
 }
 
-class MenuHeaderViewHolder(
+internal class MenuHeaderViewHolder(
     private val binding: MenuHeaderItemBinding
 ) : RecyclerView.ViewHolder(binding.root) {
 
@@ -72,7 +72,7 @@ class MenuHeaderViewHolder(
     }
 }
 
-class MenuItemViewHolder(
+internal class MenuItemViewHolder(
     private val binding: MenuItemBinding
 ) : RecyclerView.ViewHolder(binding.root) {
 

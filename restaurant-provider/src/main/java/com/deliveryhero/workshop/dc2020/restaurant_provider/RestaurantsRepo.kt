@@ -3,7 +3,7 @@ package com.deliveryhero.workshop.dc2020.restaurant_provider
 import com.deliveryhero.workshop.dc2020.restaurant_provider.remote.RestaurantsRemoteDataSource
 import javax.inject.Inject
 
-class RestaurantsRepo @Inject constructor(
+class RestaurantsRepo @Inject internal constructor(
     private val remoteDataSource: RestaurantsRemoteDataSource
 ) {
 

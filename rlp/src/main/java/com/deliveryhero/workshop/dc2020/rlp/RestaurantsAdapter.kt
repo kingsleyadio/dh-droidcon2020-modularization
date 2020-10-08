@@ -10,7 +10,7 @@ import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Restaurant
 import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.popularityKey
 import com.deliveryhero.workshop.dc2020.rlp.databinding.ItemRestaurantsBinding
 
-class RestaurantsAdapter(
+internal class RestaurantsAdapter(
     private val onClick: (Restaurant) -> Unit
 ) : RecyclerView.Adapter<RestaurantsAdapter.ViewHolder>() {
 

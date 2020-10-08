@@ -5,7 +5,7 @@ import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Menu
 import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Product
 import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Restaurant
 
-fun RestaurantApiModel.mapToDomain() =
+internal fun RestaurantApiModel.mapToDomain() =
     Restaurant(
         id,
         name,
@@ -18,8 +18,8 @@ fun RestaurantApiModel.mapToDomain() =
         Menu(menu.orEmpty().map(CategoryApiModel::mapToDomain))
     )
 
-fun CategoryApiModel.mapToDomain() =
+internal fun CategoryApiModel.mapToDomain() =
     Category(title, products.map(ProductApiModel::mapToDomain))
 
-fun ProductApiModel.mapToDomain() =
+internal fun ProductApiModel.mapToDomain() =
     Product(id, name, imgUrl, ingredients, price)

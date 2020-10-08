@@ -13,13 +13,12 @@ import com.bumptech.glide.Glide
 import com.deliveryhero.translation.generated.TranslationKeys
 import com.deliveryhero.workshop.dc2020.localization.StringLocalizer
 import com.deliveryhero.workshop.dc2020.mvvm_common.ViewModelFactory
-import com.deliveryhero.workshop.dc2020.rdp.RdpApp
+import com.deliveryhero.workshop.dc2020.rdp.RdpProvider
 import com.deliveryhero.workshop.dc2020.rdp.databinding.ActivityRdpBinding
 import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Restaurant
 import javax.inject.Inject
 
-
-class RdpActivity : AppCompatActivity() {
+internal class RdpActivity : AppCompatActivity() {
 
     companion object {
         private const val EXTRA_ID = "EXTRA_ID"
@@ -37,7 +36,7 @@ class RdpActivity : AppCompatActivity() {
     lateinit var viewModeFactory: ViewModelFactory<RdpViewModel>
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        RdpApp.inject(this)
+        RdpProvider.inject(this)
         super.onCreate(savedInstanceState)
         binding = ActivityRdpBinding.inflate(layoutInflater)
         setContentView(binding.root)

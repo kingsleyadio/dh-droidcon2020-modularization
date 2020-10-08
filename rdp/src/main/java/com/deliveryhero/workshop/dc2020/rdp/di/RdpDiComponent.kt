@@ -13,13 +13,13 @@ import javax.inject.Singleton
     ],
     dependencies = [RdpConfig::class]
 )
-internal interface RdpComponent {
+internal interface RdpDiComponent {
 
     @Component.Builder
     interface Builder {
         fun config(config: RdpConfig): Builder
 
-        fun build(): RdpComponent
+        fun build(): RdpDiComponent
     }
 
     val androidInjector: DispatchingAndroidInjector<Any>

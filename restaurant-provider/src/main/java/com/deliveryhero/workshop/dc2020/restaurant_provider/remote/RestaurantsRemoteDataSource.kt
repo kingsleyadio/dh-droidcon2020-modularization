@@ -4,14 +4,14 @@ import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Restaurant
 import retrofit2.Retrofit
 import javax.inject.Inject
 
-interface RestaurantsRemoteDataSource {
+internal interface RestaurantsRemoteDataSource {
 
     suspend fun getRestaurants(): List<Restaurant>
 
     suspend fun getRestaurantDetails(id: Int): Restaurant
 }
 
-class RestaurantsRemoteDataSourceImpl @Inject constructor(
+internal class RestaurantsRemoteDataSourceImpl @Inject constructor(
     private val retrofit: Retrofit
 ) : RestaurantsRemoteDataSource {
 

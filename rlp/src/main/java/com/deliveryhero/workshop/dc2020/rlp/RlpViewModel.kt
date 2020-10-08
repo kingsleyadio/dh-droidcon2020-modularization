@@ -9,7 +9,9 @@ import com.deliveryhero.workshop.dc2020.restaurant_provider.domain.Restaurant
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class RlpViewModel @Inject constructor(private val restaurantRepository: RestaurantsRepo): ViewModel() {
+internal class RlpViewModel @Inject constructor(
+    private val restaurantRepository: RestaurantsRepo
+): ViewModel() {
 
     private val restaurants = MutableLiveData<Result<List<Restaurant>>>()
     val restaurantsLiveData: LiveData<Result<List<Restaurant>>> get() = restaurants
