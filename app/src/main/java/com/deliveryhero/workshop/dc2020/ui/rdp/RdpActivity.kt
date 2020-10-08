@@ -1,10 +1,8 @@
 package com.deliveryhero.workshop.dc2020.ui.rdp
 
-import android.R
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
@@ -15,8 +13,7 @@ import com.deliveryhero.translation.generated.TranslationKeys
 import com.deliveryhero.workshop.dc2020.data.restaurant.domain.Restaurant
 import com.deliveryhero.workshop.dc2020.databinding.ActivityRdpBinding
 import com.deliveryhero.workshop.dc2020.localization.StringLocalizer
-import com.deliveryhero.workshop.dc2020.ui.common.ViewModelFactory
-import com.google.android.material.appbar.CollapsingToolbarLayout
+import com.deliveryhero.workshop.dc2020.mvvm_common.ViewModelFactory
 import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.android.synthetic.main.activity_rdp.*
 import javax.inject.Inject

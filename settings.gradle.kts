@@ -1,3 +1,4 @@
+include(":mvvm-common")
 include(":app")
 include(":localization")
 include(":translation-processor")

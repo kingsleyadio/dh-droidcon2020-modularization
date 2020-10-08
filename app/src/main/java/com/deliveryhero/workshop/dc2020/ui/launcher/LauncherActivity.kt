@@ -6,7 +6,7 @@ import androidx.appcompat.app.AlertDialog
 import com.deliveryhero.translation.generated.TranslationKeys
 import com.deliveryhero.workshop.dc2020.R
 import com.deliveryhero.workshop.dc2020.localization.StringLocalizer
-import com.deliveryhero.workshop.dc2020.ui.common.ViewModelFactory
+import com.deliveryhero.workshop.dc2020.mvvm_common.ViewModelFactory
 import com.deliveryhero.workshop.dc2020.ui.rlp.RlpActivity
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject

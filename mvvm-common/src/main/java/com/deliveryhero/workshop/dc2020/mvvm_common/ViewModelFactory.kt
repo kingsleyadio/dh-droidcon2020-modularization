@@ -1,4 +1,4 @@
-package com.deliveryhero.workshop.dc2020.ui.common
+package com.deliveryhero.workshop.dc2020.mvvm_common
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

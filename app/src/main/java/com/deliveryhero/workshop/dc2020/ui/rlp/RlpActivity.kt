@@ -12,7 +12,7 @@ import com.deliveryhero.workshop.dc2020.R
 import com.deliveryhero.workshop.dc2020.data.restaurant.domain.Restaurant
 import com.deliveryhero.workshop.dc2020.databinding.ActivityRlpBinding
 import com.deliveryhero.workshop.dc2020.localization.StringLocalizer
-import com.deliveryhero.workshop.dc2020.ui.common.ViewModelFactory
+import com.deliveryhero.workshop.dc2020.mvvm_common.ViewModelFactory
 import com.deliveryhero.workshop.dc2020.ui.rdp.RdpActivity
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
