@@ -3,7 +3,7 @@ package com.deliveryhero.workshop.dc2020.localization
 import android.content.Context
 import com.deliveryhero.translation.annotation.GenerateTranslationKeys
 
-@GenerateTranslationKeys
+@GenerateTranslationKeys(stringsPath = "localization/src/main/res/values/strings.xml")
 class ResourceStringLocalizer(private val appContext: Context) : StringLocalizer {
 
     override fun getText(key: String): String {
